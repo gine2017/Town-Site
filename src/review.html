@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" id="reviewHtml">
+<head>
+    <title>Review</title>
+    <link rel="stylesheet" type="text/css" href = "style.css">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+
+    <script>
+    function validate(){
+           "use strict";
+        let visitState = true;  
+        if (document.getElementById("visitorName").value == ''){
+            document.getElementById("visitorName").style.borderColor= "red";
+            document.getElementById("visitorName").style.backgroundColor = 'pink';
+            visitState = false;
+        }
+         else {
+          document.getElementById("visitorName").style = null;
+        }
+        return visitState;
+    }
+    </script>
+</head>
+    <body id = "review">
+       <div id= "reviewNav">
+           <ul>
+                <li><a href="projIndex.php">Home</a></li>
+                <li><a href="restaurant.html">Restaurants</a></li>
+                <li><a href="location.html">Locations</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="review.html">Review</a></li>
+                <li><a href="reference.html">Reference</a></li>
+                <li><a href="grade.html">Grade</a></li>
+            </ul>
+        </div> 
+        <h1> Tell us about your visit</h1>
+        <div id = "formReview">
+                <form onsubmit = "return validate()" action="proj.php" method="get">
+                    <div id = 'nameQuest'> 
+                    Enter your name <br>
+                    <input type = 'text' name = 'visitor' placeholder="Please enter your name" id = 'visitorName'>
+                    </div>
+                    <br>
+                    
+                    <div id = 'emailQuest'> 
+                    Enter your email <br>
+                    <input type = 'text' name = 'email' placeholder="Please enter your email" id = 'emailName'>
+                    </div>
+
+                    <div id = 'peopleQuest'> How many people in your group <br>
+                        <input type = number name = 'group' placeholder='How many people'>
+                    </div>
+                    <br>
+
+                    <div id = 'VisitDate'> When did you visit<br>
+                        <input type="date" name = 'visitDate' id = 'visitDate'>
+                    </div>
+                
+                    <div id = 'favPlace'>
+                          <fieldset>
+                        <legend>Favorite Place</legend>
+                              <!-- THE LABE FOR = value MUST BE THE SAME AS id in input -->
+                            <label for="brookdalePark">Brookdale Park</label>
+                            <input type="radio" name="fplace" value="BrookdalePark" id="brookdalePark"><br>
+
+                              <label for="watsessingPark">Watsessing Park</label>
+                            <input type="radio" name="fplace" value="WatsessingPark" id="watsessingPark"><br>
+
+                              <label for="oakside">Oakside Cultural Center</label>
+                            <input type="radio" name="fplace" value="Oakside" id="oakside"><br>
+
+
+                             <label for = "Holstens">Holsten's</label> 
+                            <input type="radio" name="fplace" value="Holstens" id="Holstens" ><br>
+
+                              <label for ="diner">Nevada Diner</label>
+                            <input type="radio" name="fplace" value="diner" checked id="diner"><br>
+
+                            <label for ="steakHouse">Steakhouse</label>
+                            <input type="radio" name="fplace" value="SteakHouse" id="steakHouse"><br>
+                        </fieldset>
+                    </div>  
+                    
+                    <div id = 'comeAgain'> Rate your visit
+                        <p>0
+                        <input type="range" name="rating" min="0" max="10" step="1" list="set">
+                        <datalist id = "set">
+                            <option>0</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                            <option>6</option>
+                            <option>7</option>
+                            <option>8</option>
+                            <option>9</option>
+                            <option>10</option>
+                        </datalist>
+                        10</p>
+                    </div>
+        
+                    <div id="button">
+                        <input type = "submit" >
+                    </div>
+              </form>
+        </div>
+    
+    </body>
+
+</html>

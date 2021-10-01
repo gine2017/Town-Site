@@ -1,0 +1,102 @@
+html,body{
+font-family: 'Darker Grotesque', sans-serif;
+padding: 0;
+margin: 0;
+height: 500px;
+}
+ 
+
+#footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #c41e3a;
+    z-index: 2;
+    width: 100%;
+    height: 100px;
+    color: white;
+    font-size: 15pt;
+    text-align: center;
+}
+#footer a{
+    text-decoration: none;
+    font-size: 15pt;
+    color: white;
+}
+
+
+#nav, #CommNav,#restNav,#localeNav,#reviewNav,#referenceNav,#rubriceNav{
+    position: absolute;
+    z-index: 2;
+}
+ul{
+     text-decoration: none;
+
+}
+li{
+    display: inline;
+}
+#nav a, #CommNav a,#restNav a,#localeNav a,#reviewNav a,#referenceNav a,#rubriceNav a{
+    color: white;
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 15pt;
+    list-style: none;
+}
+
+#nav a:hover,#CommNav a:hover,#restNav a:hover,#localeNav a:hover,#reviewNav a:hover, #referenceNav a:hover, #rubriceNav a:hover{
+    background-color: #c41e3a;
+    text-decoration: underline;
+}
+
+#reference,#rubric{
+    background-color: #EECDCD;
+}
+h1{
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-size: 30pt;
+    padding: 5px;
+    width:473px;
+    text-align: center;
+    background-color: #A52013;
+    color: white;
+}
+#grade{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 20pt;
+}
+
+#phpReview{
+    background-color: #EECDCD;
+    font-family: 'Quicksand', sans-serif;
+}
+ #thankYou p{
+    font-size:30pt;
+    color: white;
+    background-color: #A52013;
+    display: block;
+    position: absolute;
+    font-weight: lighter;
+    left: 23%;
+    top: 30%;
+    padding: 10px;
+}
+#videoPhp{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: 0; 
+}
+
+#gradeImage{
+    position: relative;
+    left: 15%;
+    top:20%;
+}
+

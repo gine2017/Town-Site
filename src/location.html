@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html id = "locale">
+<head>
+    <title>Location</title>
+    <link rel="stylesheet" type="text/css" href = "../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+
+    
+    <script>
+        let imgArray = ["i../mages/oakside.png","../images/watsessing.png","../images/brookdale.png"]; //array
+        let arrSize = imgArray.length; //length of array
+        setInterval(run, 2000);
+        let arrCount = 1;
+
+        
+        function run(){
+            document.getElementById('slideshow').src = imgArray[arrCount];
+            arrCount++;
+            if (arrCount === arrSize) {
+                arrCount = 0;
+            }
+        }
+    </script>
+</head>
+
+<body id = "location" onload="run()">
+    
+        <div id="localpic">
+            <img id="slideshow" src="../images/brookdale.jpg" alt="Town pictures" title="Town Pictures">  
+        </div>
+    
+     <div id = "localeInfo">
+        <p id = "loacaleTitle"> Places To Visit</p>
+        <p> Bloomfield is home to many beautiful places.<br>
+            Some of these places includes parks such as Brookdale and Watsessing park<br>
+            while other places have some history to them like the Oakside Bloomfield Cultural Center
+        </p>
+    </div>
+</body>
+</html>
